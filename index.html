@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Player</title>
+    <style>
+        .controls { margin-top: 20px; display: flex; gap: 10px; align-items: center; }
+        button { padding: 10px; cursor: pointer; }
+        #current_song { font-weight: bold; color: #2e7d32; }
+    </style>
+</head>
+<body>
+    <h1>Minecraft MIDI Player</h1>
+    <p id="message">Player piano...</p>
+    <p>Playing: <span id="current_song">None</span></p>
+
+    <div class="controls">
+        <button id="pause">Pause</button>
+        <button id="shuffle">Shuffle & Play</button>
+    </div>
+
+    <hr>
+    <label>Upload custom MIDI:</label>
+    <input accept=".mid, .rmi, .xmf, .mxmf" id="midi_input" type="file" />
+
+<script type="importmap">
+{
+  "imports": {
+    "spessasynth_core": "./node_modules/spessasynth_core/dist/index.js",
+    "spessasynth_lib": "./node_modules/spessasynth_lib/dist/index.js"
+  }
+}
+</script>
+<script type="module" src="main.js"></script>
+</body>
+</html>
